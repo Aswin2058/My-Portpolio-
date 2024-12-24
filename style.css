@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    background-color: black;
+    color: #fff;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+
+.nav-container{
+    color: #fff;
+    width: 100%;
+    height: 10vh;  
+    overflow: 1000; 
+}
+
+.nav-container ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    position: fixed;
+    top: 6vh;
+    right: 6%;
+    z-index: 9999;
+    
+}
+
+.nav-container ul li a{
+    text-decoration: none;
+    color: grey;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.2s;
+}
+
+.nav-container ul li a:hover{
+    font-size: x-large;
+    color: #fff;
+}
+
+#about{
+    margin-top: -6%;
+    width: 100%;
+    height: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#about .first-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+
+#about .first-page h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#about .first-page h3 {
+    font-family: 'Courier New', Courier, monospace; /* Optional: Monospace font for typewriter effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the text initially */
+    width: 0; /* Start with width 0 */
+    margin-bottom: 10px;
+    animation: typing 2s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing effect and cursor blink */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 250px; /* Expand the width to show all text */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Hide the cursor at 50% */
+    }
+}
+
+
+#about .first-page img {
+    border-radius: 60%; /* Rounded corners */
+    width: 20%;
+    height: 37%;
+    padding: 10px;
+    float: left;
+    border: 6px solid white; /* White border */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Initial glowing effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for glowing effect */
+}
+
+/* Hover effect for shining border */
+#about .first-page img:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Stronger glow on hover */
+}
+
+
+
+#about .first-page ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#about .first-page a{
+    text-decoration: none;
+}
+
+#about .first-page a:hover{
+    border: 2px solid white;
+        border-top: 0px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    
+}
+#about .first-page svg {
+    fill: #fff;
+    width: 30px;
+    height: auto;
+    animation: zoomIn 1s ease forwards; /* Apply zoom animation */
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0); /* Start with scale 0 (invisible) */
+    }
+    100% {
+        transform: scale(1); /* End with original size */
+    }
+}
+
+#about .first-page svg:hover {
+    fill: #fff;
+    width: 35px;
+    height: auto;
+    padding: 5px;
+    animation: none; /* Disable animation on hover */
+    transform: scale(1); /* Ensure it's at original size when hovered */
+}
+
+#about .second-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#works {
+    background-color: silver;
+    text-align: center;
+    width: 100%;
+    padding: 20px; /* Optional: Add padding for spacing */
+}
+
+#works .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap; 
+}
+
+#works .projects .myProjectSlide {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#works .projects .myProjectSlide:hover{
+    width: 400px;
+
+}
+
+#works .projects .myProjectSlide img {
+    height: 60vh; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crop the image to fit the container */
+    opacity: 0.5;
+    width: 100%;
+}
+
+#works .projects .myProjectSlide .description-slide{
+    position: absolute;
+    object-fit: contain;
+    max-width: 100px;
+}
+
+#works .projects .myProjectSlide h3{
+    top: 40%;
+    color: black;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+
+#works .projects .myProjectSlide a{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(41, 36, 36);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 2px;
+    font-size: smaller;
+}
+
+#works .projects .myProjectSlide a:hover{
+    font-size: large;
+    background-color: rgb(73, 67, 67);
+}
